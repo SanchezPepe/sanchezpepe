@@ -29,9 +29,7 @@ Here are some ideas to get you started:
 
 ⚽ Outside of tech, I like to run, play soccer and watch series
 
-## 🛠️ Skills
-
-### Languages
+## 🛠️ Languages
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
