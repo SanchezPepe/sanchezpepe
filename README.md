@@ -19,11 +19,11 @@ Here are some ideas to get you started:
 
 ## 🚀 About Me
 
-🎓 I am José Sánchez, a **Computer Engineer** from Instituto Tecnológico Autónomo de México
-👨‍💻 Currently I work as a **Technical Solutions Engineer** at _Google_
-🌱 Currently learning: **Flutter**
-👨‍💻  I enjoy learning new technologies, my areas of interest are **Software Engineering**, **Cloud** and **Blockchain Technology**
-⚽ Outside of tech, I like to run, play soccer and watch series
+- 🎓 I am José Sánchez, a **Computer Engineer** from Instituto Tecnológico Autónomo de México
+- 👨‍💻 Currently I work as a **Technical Solutions Engineer** at _Google_
+- 🌱 Currently learning: **Flutter**
+- 👨‍💻  I enjoy learning new technologies, my areas of interest are **Software Engineering**, **Cloud** and **Blockchain Technology**
+- ⚽ Outside of tech, I like to run, play soccer and watch series
 
 ## 🛠️ Languages
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
