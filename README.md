@@ -1,4 +1,4 @@
-# Hola <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
+# Hola <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" height="30px"> <img src="https://acegif.com/wp-content/uploads/2020/b72nv6/partyparrt-21.gif" height="30px">
 
 <!--
 **SanchezPepe/sanchezpepe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -21,7 +21,7 @@ Here are some ideas to get you started:
 
 - 🎓 I'm José Sánchez, a **Computer Engineer** from Instituto Tecnológico Autónomo de México
 - 👨‍💻 Currently I work as a **Technical Solutions Engineer** at _Google_
-- 🌱 Currently learning: **Flutter**
+- 🌱 Currently learning: **Tensorflow** and **GCP**
 - 👨‍💻 I enjoy learning new technologies, my areas of interest are **Software Engineering**, **Cloud** and **Blockchain Technology**
 - ⚽ Outside of tech, I like to run, play soccer and watch series
 
