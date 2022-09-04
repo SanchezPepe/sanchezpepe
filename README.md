@@ -22,7 +22,7 @@ Here are some ideas to get you started:
 - 🎓 I'm José Sánchez, a **Computer Engineer** from Instituto Tecnológico Autónomo de México
 - 👨‍💻 Currently I work as a **Technical Solutions Engineer** at _Google_
 - 🌱 Currently learning: **Tensorflow** and **GCP**
-- 👨‍💻 I enjoy learning new technologies, my areas of interest are **Software Engineering**, **Cloud** and **Blockchain Technology**
+- 👨‍💻 I enjoy learning new technologies, my areas of interest are **Software Engineering**, **Cloud Computing** and **Blockchain Technology**
 - ⚽ Outside of tech, I like to run, play soccer and watch series
 
 ## 🛠️ Languages
