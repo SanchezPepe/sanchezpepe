@@ -1,0 +1,269 @@
+{
+  "social_links": {
+    "github": "https://github.com/sanchezpepe",
+    "linkedin": "https://www.linkedin.com/in/sanchezjose8"
+  },
+  "personal": {
+    "name": "José Sánchez",
+    "nickname": "Pepe",
+    "phonetic": "PEH-peh",
+    "imageAlt": "José Sánchez Aguilar portrait"
+  },
+  "hero": {
+    "buttons": [
+      {
+        "text": "GitHub",
+        "socialKey": "github",
+        "icon": "github",
+        "type": "secondary"
+      },
+      {
+        "text": "LinkedIn",
+        "socialKey": "linkedin",
+        "icon": "linkedin",
+        "type": "secondary"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "icon": "terminal",
+    "categories": [
+      {
+        "name": "Web Application Development",
+        "skills": ["React.js", "Node.js", "Vue.js"]
+      },
+      {
+        "name": "Programming Languages",
+        "skills": ["Java", "JavaScript", "C#", "SQL", "Python", "TypeScript"]
+      },
+      {
+        "name": "Cloud & AI/ML",
+        "skills": [
+          "GCP",
+          "Firebase",
+          "Vertex AI",
+          "Dialogflow",
+          "Speech Models"
+        ]
+      },
+      {
+        "name": "Other",
+        "skills": ["Linux", "Git", "Stripe API"]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": 0,
+      "title": "Cloud Customer Engineer",
+      "company": "Google",
+      "period": "Jun 2025 - Present",
+      "location": "Mexico City",
+      "description": "I help small businesses adopt Google Cloud — answering technical questions, designing solutions, and making sure things actually work the way they're supposed to.",
+      "current": true
+    },
+    {
+      "id": 1,
+      "title": "Technical Solutions Engineer",
+      "company": "Google",
+      "period": "Jun 2021 - Jun 2025",
+      "location": "Mexico City",
+      "description": "Helped Google Cloud customers fix things when they broke, mostly around AI/ML. Wrote internal docs, debugged weird edge cases, and became the person people asked about ML stuff.",
+      "current": false
+    },
+    {
+      "id": 2,
+      "title": "Software Engineer",
+      "company": "Solera",
+      "period": "Nov 2020 - Jun 2021",
+      "location": "Mexico City",
+      "description": "Built and maintained C# and Java apps. Fixed bugs, wrote docs, and tried to leave the codebase better than I found it.",
+      "current": false
+    },
+    {
+      "id": 3,
+      "title": "Quality Assurance Analyst",
+      "company": "BairesDev",
+      "period": "Oct 2019 - Nov 2020",
+      "location": "Mexico City",
+      "description": "Wrote test cases, found bugs, and occasionally told developers things they didn't want to hear. Also made the documentation less confusing.",
+      "current": false
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portuguese Cheat Sheet",
+      "description": "A quick reference guide for Portuguese language learners with essential grammar, vocabulary, and phrases.",
+      "image": "https://picsum.photos/seed/portuguese/600/400",
+      "imageAlt": "Portuguese Cheat Sheet project",
+      "technologies": ["React", "Firebase", "Tailwind CSS", "GitHub Actions"],
+      "liveUrl": "https://pt.josesa.dev",
+      "githubUrl": "#"
+    },
+    {
+      "id": 2,
+      "title": "Cinema Gear Hub",
+      "description": "A user-friendly cinema gear rental platform built with Vue.js and Tailwind CSS, featuring Stripe integration and Firebase backend.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDKC3AJBVpq783Jr9ZySJ4dHHVqTnVqG_bsIXGwn0Ja7CTb74uvxG61o2lWSOg56wP5-sUZthU0Ddu_5D2JXzki3rQsOn6CdoaceBcLH8YqeaPILP5J0r_9cOA06s121hC4NSa_qgf0VpFWyFqSOAvn2o2n_i0mLwcYI6i6-GzBmoVLtO5bvvAayWUPoEXTkyavLEt_ZLcHD9bvN-23DuN70OsM2XFd31iX0aV0eRXrbina2Pnkmu6xyRZzBso_64lJJAM9McvSh18",
+      "imageAlt": "Image of Cinema Gear Hub project",
+      "technologies": ["Vue.js", "Tailwind CSS", "Firebase", "Stripe API"],
+      "liveUrl": "https://raicen.com",
+      "githubUrl": "#"
+    },
+    {
+      "id": 3,
+      "title": "Web Application for students",
+      "description": "A web app developed for students to plan schedules and track shuttle in real-time using Vue.js, Vuetify, and Firebase.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDdxztROUXPYxwqFvfcfaafZCROHcq2zkeDIAWZ6yLwcZaKEqApw1bKXf-6m1F_RAFi90to0Qx2KdqoAS5HIP7rAtlNVIO9EypYy4oaayRMBDjYEYrJdfDJOlAQSCdpjfTRmrhc7RKQoutKsNOKUFJ8KaFDTQ1wEu9PKRhEnJz8OFqsGF_NS_pmsjMo9OCOFztAEyye2lGziDTV0ND_t-wSIoe4KHG--SEEX6Qbc4fBA1EgPSZtflHr08t6ORSyQT_vIcL-1eGbUuc",
+      "imageAlt": "Image of student web application project",
+      "technologies": ["Vue.js", "Vuetify", "Firebase", "GitHub Actions"],
+      "liveUrl": "https://appitam.org",
+      "githubUrl": "#"
+    },
+    {
+      "id": 4,
+      "title": "TerraVista",
+      "description": "Interactive geospatial data visualization platform for Mexico with choropleth maps, heatmaps, and 3D visualizations.",
+      "image": "https://picsum.photos/seed/terravista/600/400",
+      "imageAlt": "TerraVista geospatial visualization platform",
+      "technologies": ["React", "MapLibre GL", "deck.gl", "Tailwind CSS"],
+      "liveUrl": "https://carto.josesa.dev",
+      "githubUrl": "https://github.com/SanchezPepe/carto"
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "name": "Spanish",
+      "proficiency": "Native",
+      "level": 100
+    },
+    {
+      "id": 2,
+      "name": "English",
+      "proficiency": "Professional",
+      "level": 90
+    },
+    {
+      "id": 3,
+      "name": "Portuguese",
+      "proficiency": "Intermediate",
+      "level": 60
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Science in Computer Engineering",
+    "institution": "Instituto Tecnológico Autónomo de México",
+    "year": "2020",
+    "icon": "memory"
+  },
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Professional Cloud Architect",
+      "issuer": "Google Cloud",
+      "date": "September 2025",
+      "icon": "verified",
+      "iconBgColor": "bg-emerald-50 dark:bg-emerald-900/30",
+      "iconColor": "text-emerald-600",
+      "link": "https://www.credly.com/badges/49430d52-a718-4b57-941d-40855a368c14/public_url"
+    },
+    {
+      "id": 2,
+      "title": "Associate Cloud Engineer",
+      "issuer": "Google Cloud",
+      "date": "Issued 2022",
+      "icon": "verified",
+      "iconBgColor": "bg-orange-50 dark:bg-orange-900/30",
+      "iconColor": "text-orange-600",
+      "link": "https://www.credly.com/badges/5b66f887-fc90-4b7d-b0c9-0da1e91755d3/public_url"
+    },
+    {
+      "id": 3,
+      "title": "Generative AI Leader",
+      "issuer": "Google Cloud",
+      "date": "Issued 2025",
+      "icon": "verified",
+      "iconBgColor": "bg-purple-50 dark:bg-purple-900/30",
+      "iconColor": "text-purple-600",
+      "link": "https://www.credly.com/badges/4f594aa6-40b2-47b2-b5cc-460d4456f6cd/public_url"
+    },
+    {
+      "id": 4,
+      "title": "Cloud Digital Leader",
+      "issuer": "Google Cloud",
+      "date": "Issued 2022",
+      "icon": "verified",
+      "iconBgColor": "bg-sky-50 dark:bg-sky-900/30",
+      "iconColor": "text-sky-600",
+      "link": "https://www.credly.com/badges/c8411ef2-1e86-48d6-bd5a-8e95f28625ef/public_url"
+    }
+  ],
+
+  "funStats": [
+    {
+      "id": 1,
+      "label": "Cups of Coffee",
+      "value": "∞",
+      "emoji": "☕"
+    },
+    {
+      "id": 2,
+      "label": "Avocados Weekly",
+      "value": "3",
+      "emoji": "🥑"
+    },
+    {
+      "id": 3,
+      "label": "Plants Alive",
+      "value": "9",
+      "emoji": "🌱"
+    }
+  ],
+
+  "interests": [
+    {
+      "id": 1,
+      "name": "Geography",
+      "emoji": "🌍"
+    },
+    {
+      "id": 2,
+      "name": "Running",
+      "emoji": "🏃"
+    },
+    {
+      "id": 3,
+      "name": "Soccer",
+      "emoji": "⚽"
+    },
+    {
+      "id": 4,
+      "name": "Traveling",
+      "emoji": "✈️"
+    },
+    {
+      "id": 5,
+      "name": "Hiking",
+      "emoji": "🥾"
+    }
+  ],
+
+  "footer": {
+    "copyright": "José Sánchez",
+    "social": [
+      {
+        "name": "GitHub",
+        "socialKey": "github",
+        "icon": "github"
+      },
+      {
+        "name": "LinkedIn",
+        "socialKey": "linkedin",
+        "icon": "linkedin"
+      }
+    ]
+  }
+}
