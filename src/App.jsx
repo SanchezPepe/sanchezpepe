@@ -1,13 +1,10 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Skills from './components/Skills';
 import Experience from './components/Experience';
 import ProjectsCarousel from './components/ProjectsCarousel';
 import CertificationsCarousel from './components/CertificationsCarousel';
 import Languages from './components/Languages';
 import Education from './components/Education';
-import Interests from './components/Interests';
-import FunStats from './components/FunStats';
 import Footer from './components/Footer';
 import { useDarkMode } from './hooks/useDarkMode';
 import contentData from './data/content.json';
@@ -31,23 +28,16 @@ function App() {
             <Experience data={contentData} />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:gap-4">
-            <Education data={contentData} />
+            <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
+              <div className="w-full lg:w-1/2">
+                <Education data={contentData} />
+              </div>
+              <div className="w-full lg:w-1/2">
+                <Languages data={contentData} />
+              </div>
+            </div>
             <CertificationsCarousel data={contentData} />
             <ProjectsCarousel data={contentData} />
-          </div>
-        </div>
-
-        {/* Bottom Row: Skills (50%) + Languages/Stats (25%) + Interests (25%) */}
-        <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
-          <div className="w-full lg:w-1/2">
-            <Skills data={contentData} />
-          </div>
-          <div className="w-full lg:w-1/4 flex flex-col gap-3 lg:gap-4">
-            <Languages data={contentData} />
-            <FunStats data={contentData} />
-          </div>
-          <div className="w-full lg:w-1/4">
-            <Interests data={contentData} />
           </div>
         </div>
 
