@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #135bec;
+  --color-background-light: #f0f2f5;
+  --color-background-dark: #0d1117;
+  --color-card-light: #ffffff;
+  --color-card-dark: #161b22;
+
+  --font-family-display: Inter, sans-serif;
+
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+}
+
+/* Scrollbar hide utilities */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle dot pattern background */
+body {
+  background-color: var(--color-background-light);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 2px, transparent 2px);
+  background-size: 32px 32px;
+}
+
+.dark body {
+  background-color: var(--color-background-dark);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+  background-size: 32px 32px;
+}
