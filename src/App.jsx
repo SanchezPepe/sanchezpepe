@@ -2,7 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import ProjectsCarousel from './components/ProjectsCarousel';
-import CertificationsCarousel from './components/CertificationsCarousel';
+import Certifications from './components/Certifications';
 import Languages from './components/Languages';
 import Education from './components/Education';
 import Footer from './components/Footer';
@@ -24,19 +24,13 @@ function App() {
 
         {/* Main Content: Experience (left) + Right column stack */}
         <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-3 lg:mb-4">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:gap-4">
             <Experience data={contentData} />
+            <Languages data={contentData} />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:gap-4">
-            <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
-              <div className="w-full lg:w-1/2">
-                <Education data={contentData} />
-              </div>
-              <div className="w-full lg:w-1/2">
-                <Languages data={contentData} />
-              </div>
-            </div>
-            <CertificationsCarousel data={contentData} />
+            <Education data={contentData} />
+            <Certifications data={contentData} />
             <ProjectsCarousel data={contentData} />
           </div>
         </div>
