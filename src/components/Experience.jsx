@@ -42,7 +42,7 @@ const Experience = ({ data }) => {
         </span>
       </div>
       <div className="relative border-l-2 border-gray-100 dark:border-gray-800 ml-3 space-y-10 group/list">
-        {data.experience.map((exp, index) => (
+        {data.experience.map((exp) => (
           <div key={exp.id} className="relative pl-8 group/item transition-all duration-300 ease-out group-hover/list:opacity-50 hover:!opacity-100 hover:translate-x-1">
             <div className={`absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-4 border-white dark:border-[#161b22] transition-colors ${
               exp.current
