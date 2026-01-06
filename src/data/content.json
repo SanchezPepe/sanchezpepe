@@ -25,34 +25,6 @@
       }
     ]
   },
-  "skills": {
-    "title": "Technical Skills",
-    "icon": "terminal",
-    "categories": [
-      {
-        "name": "Web Application Development",
-        "skills": ["React.js", "Node.js", "Vue.js"]
-      },
-      {
-        "name": "Programming Languages",
-        "skills": ["Java", "JavaScript", "C#", "SQL", "Python", "TypeScript"]
-      },
-      {
-        "name": "Cloud & AI/ML",
-        "skills": [
-          "GCP",
-          "Firebase",
-          "Vertex AI",
-          "Dialogflow",
-          "Speech Models"
-        ]
-      },
-      {
-        "name": "Other",
-        "skills": ["Linux", "Git", "Stripe API"]
-      }
-    ]
-  },
   "experience": [
     {
       "id": 0,
@@ -201,56 +173,6 @@
       "link": "https://www.credly.com/badges/c8411ef2-1e86-48d6-bd5a-8e95f28625ef/public_url"
     }
   ],
-
-  "funStats": [
-    {
-      "id": 1,
-      "label": "Cups of Coffee",
-      "value": "∞",
-      "emoji": "☕"
-    },
-    {
-      "id": 2,
-      "label": "Avocados Weekly",
-      "value": "3",
-      "emoji": "🥑"
-    },
-    {
-      "id": 3,
-      "label": "Plants Alive",
-      "value": "9",
-      "emoji": "🌱"
-    }
-  ],
-
-  "interests": [
-    {
-      "id": 1,
-      "name": "Geography",
-      "emoji": "🌍"
-    },
-    {
-      "id": 2,
-      "name": "Running",
-      "emoji": "🏃"
-    },
-    {
-      "id": 3,
-      "name": "Soccer",
-      "emoji": "⚽"
-    },
-    {
-      "id": 4,
-      "name": "Traveling",
-      "emoji": "✈️"
-    },
-    {
-      "id": 5,
-      "name": "Hiking",
-      "emoji": "🥾"
-    }
-  ],
-
   "footer": {
     "copyright": "José Sánchez",
     "social": [
