@@ -1,11 +1,15 @@
 import heroImage from "../assets/portrait2.jpg";
 import Icon from "./Icon";
+import DarkModeToggle from "./DarkModeToggle";
 
-const Hero = ({ data }) => {
+const Hero = ({ data, isDark, toggleDarkMode }) => {
   return (
     <>
       {/* Hero Text Tile */}
-      <div className="col-span-1 md:col-span-2 lg:col-span-3 rounded-3xl bg-card-light dark:bg-card-dark p-6 sm:p-10 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col justify-center">
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 rounded-3xl bg-card-light dark:bg-card-dark p-6 sm:p-10 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col justify-center relative">
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 no-print">
+          <DarkModeToggle isDark={isDark} onToggle={toggleDarkMode} />
+        </div>
         <div className="space-y-4">
           {/* Name */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-gray-900 dark:text-white">
