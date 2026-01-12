@@ -10,7 +10,7 @@ const Hero = ({ data, isDark, toggleDarkMode }) => {
         <div className="absolute top-4 right-4 sm:top-6 sm:right-6 no-print">
           <DarkModeToggle isDark={isDark} onToggle={toggleDarkMode} />
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 pr-14 sm:pr-0">
           {/* Name */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-gray-900 dark:text-white">
             José Sánchez <span className="text-primary">(Pepe)</span> <span className="text-lg text-gray-400 dark:text-gray-500" style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontStyle: 'italic' }}>[{data.personal.phonetic}]</span>
