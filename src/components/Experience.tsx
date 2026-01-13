@@ -1,30 +1,35 @@
-import React from "react";
+import type { ContentData } from "../types/content";
 
-const Experience = ({ data }) => {
-  // Calculate years of experience from earliest position
-  const calculateYearsOfExperience = () => {
-    const months = {
-      'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3,
-      'May': 4, 'Jun': 5, 'Jul': 6, 'Aug': 7,
-      'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11
-    };
+interface ExperienceProps {
+	data: ContentData;
+}
 
-    let earliestDate = new Date();
+const MONTH_MAP: Record<string, number> = {
+	'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3,
+	'May': 4, 'Jun': 5, 'Jul': 6, 'Aug': 7,
+	'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11
+};
 
-    data.experience.forEach(exp => {
-      const parts = exp.period.split(' - ')[0].split(' ');
-      const month = months[parts[0]];
-      const year = parseInt(parts[1]);
-      const startDate = new Date(year, month);
-      if (startDate < earliestDate) {
-        earliestDate = startDate;
-      }
-    });
+const MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
 
-    const now = new Date();
-    const years = Math.floor((now - earliestDate) / (1000 * 60 * 60 * 24 * 365));
-    return years;
-  };
+const Experience = ({ data }: ExperienceProps) => {
+	const calculateYearsOfExperience = (): number => {
+		let earliestDate = new Date();
+
+		data.experience.forEach(exp => {
+			const parts = exp.period.split(' - ')[0].split(' ');
+			const month = MONTH_MAP[parts[0]] ?? 0;
+			const year = parseInt(parts[1], 10);
+			const startDate = new Date(year, month);
+			if (startDate < earliestDate) {
+				earliestDate = startDate;
+			}
+		});
+
+		const now = new Date();
+		const years = Math.floor((now.getTime() - earliestDate.getTime()) / MS_PER_YEAR);
+		return years;
+	};
 
   const yearsOfExperience = calculateYearsOfExperience();
 

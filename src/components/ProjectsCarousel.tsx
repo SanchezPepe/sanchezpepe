@@ -1,37 +1,47 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
+import type { ContentData } from "../types/content";
 
-const ProjectsCarousel = ({ data }) => {
-  const scrollRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
+const SCROLL_AMOUNT = 320;
+const SCROLL_THRESHOLD = 10;
+const AUTO_SCROLL_INTERVAL_MS = 3000;
 
-  const scroll = (direction) => {
+interface ProjectsCarouselProps {
+	data: ContentData;
+}
+
+type ScrollDirection = "left" | "right";
+
+const ProjectsCarousel = ({ data }: ProjectsCarouselProps) => {
+	const scrollRef = useRef<HTMLDivElement>(null);
+	const [isPaused, setIsPaused] = useState(false);
+
+	const scroll = useCallback((direction: ScrollDirection) => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      const scrollAmount = 320;
 
       if (direction === "right") {
-        const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 10;
+        const isAtEnd = scrollLeft + clientWidth >= scrollWidth - SCROLL_THRESHOLD;
         if (isAtEnd) {
           scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
         } else {
           scrollRef.current.scrollBy({
-            left: scrollAmount,
+            left: SCROLL_AMOUNT,
             behavior: "smooth",
           });
         }
       } else {
-        const isAtStart = scrollLeft <= 10;
+        const isAtStart = scrollLeft <= SCROLL_THRESHOLD;
         if (isAtStart) {
           scrollRef.current.scrollTo({ left: scrollWidth, behavior: "smooth" });
         } else {
           scrollRef.current.scrollBy({
-            left: -scrollAmount,
+            left: -SCROLL_AMOUNT,
             behavior: "smooth",
           });
         }
       }
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (isPaused) return;
@@ -39,7 +49,7 @@ const ProjectsCarousel = ({ data }) => {
     const interval = setInterval(() => {
       if (scrollRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-        const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 10;
+        const isAtEnd = scrollLeft + clientWidth >= scrollWidth - SCROLL_THRESHOLD;
 
         if (isAtEnd) {
           scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
@@ -47,10 +57,10 @@ const ProjectsCarousel = ({ data }) => {
           scroll("right");
         }
       }
-    }, 3000);
+    }, AUTO_SCROLL_INTERVAL_MS);
 
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, scroll]);
 
   return (
     <div className="rounded-3xl bg-card-light dark:bg-card-dark p-6 sm:p-8 shadow-sm border border-gray-100 dark:border-gray-800 h-full">
