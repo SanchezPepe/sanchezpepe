@@ -1,6 +1,10 @@
-import React from "react";
+import type { ContentData } from "../types/content";
 
-const Certifications = ({ data }) => {
+interface CertificationsProps {
+	data: ContentData;
+}
+
+const Certifications = ({ data }: CertificationsProps) => {
   return (
     <div className="rounded-3xl bg-card-light dark:bg-card-dark p-6 shadow-sm border border-gray-100 dark:border-gray-800 h-full">
       <div className="flex items-center gap-2 mb-4">
