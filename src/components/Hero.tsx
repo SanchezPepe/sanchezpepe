@@ -1,8 +1,15 @@
 import heroImage from "../assets/portrait2.jpg";
 import Icon from "./Icon";
 import DarkModeToggle from "./DarkModeToggle";
+import type { ContentData } from "../types/content";
 
-const Hero = ({ data, isDark, toggleDarkMode }) => {
+interface HeroProps {
+	data: ContentData;
+	isDark: boolean;
+	toggleDarkMode: () => void;
+}
+
+const Hero = ({ data, isDark, toggleDarkMode }: HeroProps) => {
   return (
     <>
       {/* Hero Text Tile */}
@@ -46,6 +53,7 @@ const Hero = ({ data, isDark, toggleDarkMode }) => {
           alt={data.personal.imageAlt}
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
           src={heroImage}
+          loading="lazy"
         />
         <div className="absolute bottom-0 left-0 right-0 z-20 p-4 bg-black/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
           <p className="text-white text-center text-sm leading-relaxed mb-3">
