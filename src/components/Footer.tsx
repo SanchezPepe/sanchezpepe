@@ -1,7 +1,11 @@
-import React from "react";
 import Icon from "./Icon";
+import type { ContentData } from "../types/content";
 
-const Footer = ({ data }) => {
+interface FooterProps {
+	data: ContentData;
+}
+
+const Footer = ({ data }: FooterProps) => {
   return (
     <footer className="mt-12 text-center text-sm text-gray-500 no-print">
       <div className="flex justify-center gap-4 mb-3">

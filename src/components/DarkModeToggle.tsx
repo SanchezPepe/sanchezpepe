@@ -1,6 +1,9 @@
-import React from 'react';
+interface DarkModeToggleProps {
+	isDark: boolean;
+	onToggle: () => void;
+}
 
-const DarkModeToggle = ({ isDark, onToggle }) => {
+const DarkModeToggle = ({ isDark, onToggle }: DarkModeToggleProps) => {
   return (
     <button
       onClick={onToggle}
