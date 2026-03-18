@@ -66,43 +66,23 @@
   "projects": [
     {
       "id": 1,
-      "title": "Portuguese Cheat Sheet",
-      "description": "A quick reference guide for Portuguese language learners with essential grammar, vocabulary, and phrases.",
-      "image": "https://picsum.photos/seed/portuguese/600/400",
-      "imageAlt": "Portuguese Cheat Sheet project",
-      "technologies": ["React", "Firebase", "Tailwind CSS", "GitHub Actions"],
-      "liveUrl": "https://pt.josesa.dev",
-      "githubUrl": "#"
-    },
-    {
-      "id": 2,
-      "title": "Cinema Gear Hub",
+      "title": "Raicen",
       "description": "A user-friendly cinema gear rental platform built with Vue.js and Tailwind CSS, featuring Stripe integration and Firebase backend.",
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDKC3AJBVpq783Jr9ZySJ4dHHVqTnVqG_bsIXGwn0Ja7CTb74uvxG61o2lWSOg56wP5-sUZthU0Ddu_5D2JXzki3rQsOn6CdoaceBcLH8YqeaPILP5J0r_9cOA06s121hC4NSa_qgf0VpFWyFqSOAvn2o2n_i0mLwcYI6i6-GzBmoVLtO5bvvAayWUPoEXTkyavLEt_ZLcHD9bvN-23DuN70OsM2XFd31iX0aV0eRXrbina2Pnkmu6xyRZzBso_64lJJAM9McvSh18",
-      "imageAlt": "Image of Cinema Gear Hub project",
+      "image": "./raicen.png",
+      "imageAlt": "Image of Raicen project",
       "technologies": ["Vue.js", "Tailwind CSS", "Firebase", "Stripe API"],
       "liveUrl": "https://raicen.com",
       "githubUrl": "#"
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "Web Application for students",
       "description": "A web app developed for students to plan schedules and track shuttle in real-time using Vue.js, Vuetify, and Firebase.",
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDdxztROUXPYxwqFvfcfaafZCROHcq2zkeDIAWZ6yLwcZaKEqApw1bKXf-6m1F_RAFi90to0Qx2KdqoAS5HIP7rAtlNVIO9EypYy4oaayRMBDjYEYrJdfDJOlAQSCdpjfTRmrhc7RKQoutKsNOKUFJ8KaFDTQ1wEu9PKRhEnJz8OFqsGF_NS_pmsjMo9OCOFztAEyye2lGziDTV0ND_t-wSIoe4KHG--SEEX6Qbc4fBA1EgPSZtflHr08t6ORSyQT_vIcL-1eGbUuc",
-      "imageAlt": "Image of student web application project",
+      "image": "./appitam.jpg",
+      "imageAlt": "Image of App ITAM project",
       "technologies": ["Vue.js", "Vuetify", "Firebase", "GitHub Actions"],
       "liveUrl": "https://appitam.org",
       "githubUrl": "#"
-    },
-    {
-      "id": 4,
-      "title": "TerraVista",
-      "description": "Interactive geospatial data visualization platform for Mexico with choropleth maps, heatmaps, and 3D visualizations.",
-      "image": "https://picsum.photos/seed/terravista/600/400",
-      "imageAlt": "TerraVista geospatial visualization platform",
-      "technologies": ["React", "MapLibre GL", "deck.gl", "Tailwind CSS"],
-      "liveUrl": "https://carto.josesa.dev",
-      "githubUrl": "https://github.com/SanchezPepe/carto"
     }
   ],
   "languages": [

@@ -1,4 +1,3 @@
-import heroImage from "../assets/portrait2.jpg";
 import Icon from "./Icon";
 import DarkModeToggle from "./DarkModeToggle";
 import type { ContentData } from "../types/content";
@@ -47,17 +46,17 @@ const Hero = ({ data, isDark, toggleDarkMode }: HeroProps) => {
         </div>
       </div>
 
-      {/* Portrait Tile */}
+      {/* Portrait Tile - Penguin gif */}
       <div className="col-span-1 md:col-span-2 lg:col-span-1 h-full min-h-[300px] lg:min-h-auto relative rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 group">
         <img
           alt={data.personal.imageAlt}
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-          src={heroImage}
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExamwzaGF4MGUxcGgza3Z3eXlyNjl3Yjl5YWc3eGJ3ZzdiNDJuamVraSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IxnbMSCfgE3zq/giphy.gif"
           loading="lazy"
         />
         <div className="absolute bottom-0 left-0 right-0 z-20 p-4 bg-black/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
           <p className="text-white text-center text-sm leading-relaxed mb-3">
-            Why a penguin? No deep reason. Who doesn't like emperor penguins?
+            Emperor penguins are cool
           </p>
           <div className="text-center">
             <a href="https://www.youtube.com/watch?v=q3uXXh1sHcI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-medium hover:bg-blue-700 transition-colors">
