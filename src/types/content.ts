@@ -40,6 +40,8 @@ export interface Project {
 	technologies: string[];
 	liveUrl: string;
 	githubUrl: string;
+	slug?: string;
+	blogPublishedAt?: string;
 }
 
 export interface Language {

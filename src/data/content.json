@@ -72,7 +72,9 @@
       "imageAlt": "Image of Raicen project",
       "technologies": ["Vue.js", "Tailwind CSS", "Firebase", "Stripe API"],
       "liveUrl": "https://raicen.com",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "slug": "raicen",
+      "blogPublishedAt": "2022"
     },
     {
       "id": 2,
@@ -82,7 +84,9 @@
       "imageAlt": "Image of App ITAM project",
       "technologies": ["Vue.js", "Vuetify", "Firebase", "GitHub Actions"],
       "liveUrl": "https://appitam.org",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "slug": "appitam",
+      "blogPublishedAt": "2021"
     }
   ],
   "languages": [
