@@ -7,6 +7,13 @@ import DarkModeToggle from './DarkModeToggle'
 
 const postModules = import.meta.glob('../data/posts/*.md', { query: '?raw', import: 'default' })
 
+type Lang = 'en' | 'es'
+
+function getSavedLang(): Lang {
+  const saved = localStorage.getItem('blogLang')
+  return saved === 'es' ? 'es' : 'en'
+}
+
 function estimateReadingTime(text: string): number {
   return Math.max(1, Math.ceil(text.trim().split(/\s+/).length / 200))
 }
@@ -20,14 +27,25 @@ interface BlogPostProps {
 const BlogPost = ({ data, isDark, toggleDarkMode }: BlogPostProps) => {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
+  const [lang, setLang] = useState<Lang>(getSavedLang)
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(true)
 
   const project = data.projects.find(p => p.slug === slug)
 
+  const hasLang = (l: Lang) => `../data/posts/${slug}.${l}.md` in postModules
+  const showToggle = hasLang('en') && hasLang('es')
+
+  function switchLang(l: Lang) {
+    setLang(l)
+    localStorage.setItem('blogLang', l)
+  }
+
   useEffect(() => {
     setLoading(true)
-    const key = `../data/posts/${slug}.md`
+    // Fall back to 'en' if the preferred lang doesn't exist for this post
+    const activeLang = hasLang(lang) ? lang : 'en'
+    const key = `../data/posts/${slug}.${activeLang}.md`
     const loader = postModules[key]
     if (loader) {
       loader().then(raw => {
@@ -35,9 +53,10 @@ const BlogPost = ({ data, isDark, toggleDarkMode }: BlogPostProps) => {
         setLoading(false)
       })
     } else {
+      setContent('')
       setLoading(false)
     }
-  }, [slug])
+  }, [slug, lang]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!project) {
     return (
@@ -55,18 +74,46 @@ const BlogPost = ({ data, isDark, toggleDarkMode }: BlogPostProps) => {
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-1.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors shrink-0"
           >
             <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_back</span>
             Back
           </button>
-          <span className="text-sm font-semibold text-gray-900 dark:text-white truncate max-w-xs hidden sm:block">
+
+          <span className="text-sm font-semibold text-gray-900 dark:text-white truncate hidden sm:block">
             {project.title}
           </span>
-          <DarkModeToggle isDark={isDark} onToggle={toggleDarkMode} />
+
+          <div className="flex items-center gap-2 shrink-0">
+            {showToggle && (
+              <div className="flex rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 text-xs font-bold">
+                <button
+                  onClick={() => switchLang('en')}
+                  className={`px-2.5 py-1.5 transition-colors ${
+                    lang === 'en'
+                      ? 'bg-primary text-white'
+                      : 'bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => switchLang('es')}
+                  className={`px-2.5 py-1.5 transition-colors ${
+                    lang === 'es'
+                      ? 'bg-primary text-white'
+                      : 'bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                  }`}
+                >
+                  ES
+                </button>
+              </div>
+            )}
+            <DarkModeToggle isDark={isDark} onToggle={toggleDarkMode} />
+          </div>
         </div>
       </header>
 
