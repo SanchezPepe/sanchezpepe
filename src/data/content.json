@@ -68,7 +68,7 @@
       "id": 3,
       "title": "Fitness Agent",
       "description": "A personal fitness coaching bot built with Google ADK and Vertex AI. Routes messages to specialized sub-agents that query live Strava and Hevy data.",
-      "image": "./fitness.svg",
+      "image": "./fitness.png",
       "imageAlt": "Diagram of the Fitness Agent multi-agent architecture",
       "technologies": ["Python", "Google ADK", "Vertex AI", "Gemini 2.5 Flash", "Telegram", "Cloud Run"],
       "liveUrl": "#",
