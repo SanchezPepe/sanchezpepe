@@ -1,9 +1,28 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import mermaid from 'mermaid'
 import type { ContentData } from '../types/content'
 import DarkModeToggle from './DarkModeToggle'
+
+function MermaidDiagram({ chart, isDark }: { chart: string; isDark: boolean }) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    // mermaid.run() processes nodes in-place in the real DOM, which lets the
+    // browser measure text and compute foreignObject dimensions correctly.
+    // mermaid.render() (string-based) returns foreignObjects with width=0.
+    mermaid.initialize({ startOnLoad: false, theme: isDark ? 'dark' : 'default' })
+    el.removeAttribute('data-processed')
+    el.textContent = chart
+    mermaid.run({ nodes: [el] }).catch(() => { el.textContent = chart })
+  }, [chart, isDark])
+
+  return <div className="mermaid my-6 overflow-x-auto flex justify-center" ref={ref} />
+}
 
 const postModules = import.meta.glob('../data/posts/*.md', { query: '?raw', import: 'default' })
 
@@ -214,11 +233,24 @@ const BlogPost = ({ data, isDark, toggleDarkMode }: BlogPostProps) => {
                   </code>
                 )
               },
-              pre: ({ children }) => (
-                <pre className="bg-gray-900 dark:bg-gray-950 rounded-2xl p-5 overflow-x-auto my-6 text-sm leading-6">
-                  {children}
-                </pre>
-              ),
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              pre: ({ children, node }: any) => {
+                const codeNode = node?.children?.[0]
+                if (
+                  codeNode?.type === 'element' &&
+                  codeNode?.tagName === 'code' &&
+                  codeNode?.properties?.className?.[0] === 'language-mermaid'
+                ) {
+                  const textNode = codeNode.children?.[0]
+                  const chart = textNode?.type === 'text' ? String(textNode.value).trim() : ''
+                  return <MermaidDiagram chart={chart} isDark={isDark} />
+                }
+                return (
+                  <pre className="bg-gray-900 dark:bg-gray-950 rounded-2xl p-5 overflow-x-auto my-6 text-sm leading-6">
+                    {children}
+                  </pre>
+                )
+              },
               a: ({ href, children }) => (
                 <a
                   href={href}
