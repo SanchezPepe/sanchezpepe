@@ -65,6 +65,18 @@
   ],
   "projects": [
     {
+      "id": 3,
+      "title": "Fitness Agent",
+      "description": "A personal fitness coaching bot built with Google ADK and Vertex AI. Routes messages to specialized sub-agents that query live Strava and Hevy data.",
+      "image": "./fitness.svg",
+      "imageAlt": "Diagram of the Fitness Agent multi-agent architecture",
+      "technologies": ["Python", "Google ADK", "Vertex AI", "Gemini 2.5 Flash", "Telegram", "Cloud Run"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "slug": "fitness",
+      "blogPublishedAt": "2025"
+    },
+    {
       "id": 1,
       "title": "Raicen",
       "description": "A user-friendly cinema gear rental platform built with Vue.js and Tailwind CSS, featuring Stripe integration and Firebase backend.",
