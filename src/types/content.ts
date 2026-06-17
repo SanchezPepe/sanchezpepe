@@ -1,6 +1,7 @@
 export interface SocialLinks {
 	github: string;
 	linkedin: string;
+	email: string;
 }
 
 export interface Personal {
@@ -18,6 +19,7 @@ export interface HeroButton {
 }
 
 export interface Hero {
+	taglines: string[];
 	buttons: HeroButton[];
 }
 
@@ -38,8 +40,8 @@ export interface Project {
 	image: string;
 	imageAlt: string;
 	technologies: string[];
-	liveUrl: string;
-	githubUrl: string;
+	liveUrl?: string;
+	githubUrl?: string;
 	slug?: string;
 	blogPublishedAt?: string;
 }

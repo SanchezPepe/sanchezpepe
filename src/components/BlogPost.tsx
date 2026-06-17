@@ -276,7 +276,7 @@ const BlogPost = ({ data, isDark, toggleDarkMode }: BlogPostProps) => {
 
         {!loading && (
           <div className="mt-14 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-wrap gap-3">
-            {project.liveUrl && project.liveUrl !== '#' && (
+            {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
@@ -287,7 +287,7 @@ const BlogPost = ({ data, isDark, toggleDarkMode }: BlogPostProps) => {
                 View Live
               </a>
             )}
-            {project.githubUrl && project.githubUrl !== '#' && (
+            {project.githubUrl && (
               <a
                 href={project.githubUrl}
                 target="_blank"

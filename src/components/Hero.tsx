@@ -24,8 +24,9 @@ const Hero = ({ data, isDark, toggleDarkMode }: HeroProps) => {
 
           {/* One-liner */}
           <div className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl space-y-1">
-            <p>Computer Engineer & Customer Engineer at Google Cloud.</p>
-            {/* <p>I help businesses figure out the cloud. The coffee helps me figure out everything else.</p> */}
+            {data.hero.taglines.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
           </div>
 
           {/* Buttons */}
