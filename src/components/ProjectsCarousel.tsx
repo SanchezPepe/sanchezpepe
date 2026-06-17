@@ -4,7 +4,7 @@ import type { ContentData } from "../types/content";
 
 const SCROLL_AMOUNT = 320;
 const SCROLL_THRESHOLD = 10;
-const AUTO_SCROLL_INTERVAL_MS = 3000;
+const AUTO_SCROLL_INTERVAL_MS = 6000;
 
 interface ProjectsCarouselProps {
   data: ContentData;

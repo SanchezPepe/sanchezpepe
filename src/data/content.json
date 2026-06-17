@@ -1,7 +1,8 @@
 {
   "social_links": {
     "github": "https://github.com/sanchezpepe",
-    "linkedin": "https://www.linkedin.com/in/sanchezjose8"
+    "linkedin": "https://www.linkedin.com/in/sanchezjose8",
+    "email": "mailto:jjsamx1@gmail.com"
   },
   "personal": {
     "name": "José Sánchez",
@@ -10,6 +11,10 @@
     "imageAlt": "José Sánchez Aguilar portrait"
   },
   "hero": {
+    "taglines": [
+      "Computer Engineer & Customer Engineer at Google Cloud.",
+      "I help businesses figure out the cloud. The coffee helps me figure out everything else."
+    ],
     "buttons": [
       {
         "text": "GitHub",
@@ -21,6 +26,12 @@
         "text": "LinkedIn",
         "socialKey": "linkedin",
         "icon": "linkedin",
+        "type": "secondary"
+      },
+      {
+        "text": "Email",
+        "socialKey": "email",
+        "icon": "email",
         "type": "secondary"
       }
     ]
@@ -71,10 +82,8 @@
       "image": "./fitness.png",
       "imageAlt": "Diagram of the Fitness Agent multi-agent architecture",
       "technologies": ["Python", "Google ADK", "Vertex AI", "Gemini 2.5 Flash", "Telegram", "Cloud Run"],
-      "liveUrl": "#",
-      "githubUrl": "#",
       "slug": "fitness",
-      "blogPublishedAt": "2025"
+      "blogPublishedAt": "2026"
     },
     {
       "id": 1,
@@ -84,19 +93,17 @@
       "imageAlt": "Image of Raicen project",
       "technologies": ["Vue.js", "Tailwind CSS", "Firebase", "Stripe API"],
       "liveUrl": "https://raicen.com",
-      "githubUrl": "#",
       "slug": "raicen",
       "blogPublishedAt": "2022"
     },
     {
       "id": 2,
-      "title": "Web Application for students",
-      "description": "A web app developed for students to plan schedules and track shuttle in real-time using Vue.js, Vuetify, and Firebase.",
+      "title": "App ITAM",
+      "description": "A web app for ITAM students to plan schedules and track the campus shuttle in real-time.",
       "image": "./appitam.jpg",
       "imageAlt": "Image of App ITAM project",
       "technologies": ["Vue.js", "Vuetify", "Firebase", "GitHub Actions"],
       "liveUrl": "https://appitam.org",
-      "githubUrl": "#",
       "slug": "appitam",
       "blogPublishedAt": "2021"
     }
@@ -181,6 +188,11 @@
         "name": "LinkedIn",
         "socialKey": "linkedin",
         "icon": "linkedin"
+      },
+      {
+        "name": "Email",
+        "socialKey": "email",
+        "icon": "email"
       }
     ]
   }
