@@ -6,7 +6,7 @@ interface CertificationsProps {
 
 const Certifications = ({ data }: CertificationsProps) => {
   return (
-    <div className="rounded-3xl bg-card-light dark:bg-card-dark p-6 shadow-sm border border-gray-100 dark:border-gray-800 h-full">
+    <div className="rounded-3xl bg-card-light dark:bg-card-dark p-6 shadow-sm border border-gray-100 dark:border-gray-800">
       <div className="flex items-center gap-2 mb-4">
         <div className="p-2 rounded-lg bg-teal-100 dark:bg-teal-900/20 text-teal-600">
           <span className="material-symbols-outlined">verified</span>
@@ -42,7 +42,8 @@ const Certifications = ({ data }: CertificationsProps) => {
                   <h4 className="font-bold text-gray-900 dark:text-white text-xs leading-tight group-hover:text-primary transition-colors line-clamp-2">
                     {cert.title}
                   </h4>
-                  <p className="text-[10px] text-gray-400 mt-1">{cert.date}</p>
+                  <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-0.5 font-medium">{cert.issuer}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5">{cert.date}</p>
                 </div>
               </div>
             </CertWrapper>

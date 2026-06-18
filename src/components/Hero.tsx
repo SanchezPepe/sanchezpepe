@@ -23,9 +23,9 @@ const Hero = ({ data, isDark, toggleDarkMode }: HeroProps) => {
           </h2>
 
           {/* One-liner */}
-          <div className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl space-y-1">
+          <div className="max-w-2xl space-y-1">
             {data.hero.taglines.map((line, i) => (
-              <p key={i}>{line}</p>
+              <p key={i} className={i === 0 ? "text-xl sm:text-2xl text-gray-600 dark:text-gray-400" : "text-lg sm:text-xl text-gray-500 dark:text-gray-500"}>{line}</p>
             ))}
           </div>
 

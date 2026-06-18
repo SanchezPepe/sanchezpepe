@@ -24,11 +24,11 @@ function Portfolio({ isDark, toggleDarkMode }: { isDark: boolean; toggleDarkMode
       <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-3 lg:mb-4">
         <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:gap-4">
           <Experience data={typedContentData} />
-          <Languages data={typedContentData} />
         </div>
         <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:gap-4">
           <Education data={typedContentData} />
           <Certifications data={typedContentData} />
+          <Languages data={typedContentData} />
         </div>
       </div>
 
